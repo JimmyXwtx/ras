@@ -19,6 +19,6 @@ Connect an LED and switch to the Raspberry Pi with the following circuit:
 * Run `node tcpServer` to start TCP server and control LED by connecting via TCP
 * Run `node udpServer` to start UDP server and control LED by sending UDP packet
 * run `node webApp` to start express server and control LED witha web browser:
-  * [http://<raspberrypi>/on](http://<raspberrypi>/on) will turn on LED
-  * [http://<raspberrypi>/off](http://<raspberrypi>/off) will turn off LED
-  * [http://<raspberrypi>/](http://<raspberrypi>/) will toggle LED
+  * [http://raspberrypihost/on](http://raspberrypi/on) will turn on LED
+  * [http://raspberrypihost/off](http://raspberrypi/off) will turn off LED
+  * [http://raspberrypihost/](http://raspberrypi/) will toggle LED
