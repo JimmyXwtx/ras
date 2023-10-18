@@ -1,8 +1,8 @@
-#include <WiFiNINA.h>
-
 /*
   Based off of https://github.com/tigoe/Wifi_examples/blob/main/simpleUDPClient/simpleUDPClient.ino by Tom Igoe
 */
+
+#include <WiFiNINA.h>
 #include <SPI.h>
 #include <WiFiNINA.h>  // use this for MKR1010 board and Nano 33 IoT
 //#include <WiFi101.h>        // use this for the MKR1000 board

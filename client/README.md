@@ -6,3 +6,6 @@ You must first flash [udpButtonClient.ino](udpButtonClient.ino) to an Arduino wi
 
 ## Circuit
 ![Arduino circuit](../docs/arduino.png)
+
+### Notes
+Additional Arduino WiFi examples can be found [here](https://github.com/tigoe/Wifi_examples/tree/main).
