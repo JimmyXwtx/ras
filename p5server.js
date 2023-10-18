@@ -26,7 +26,6 @@ gpio.on("change", (channel, value) => {
 // CONTENTS FROM button.js END //
 const path = require('path');
 const express = require("express");
-const { write } = require("fs");
 const app = express();
 
 const PORT = 8000;
@@ -39,7 +38,7 @@ app.get("/", (req, res) => {
 app.get("/led", (req, res) => {
   isOn = !isOn
   writeLed(isOn)
-  res.send(isOn)
+  res.json({state: isOn})
 })
 
 app.listen(PORT, ()=>console.log("Port open on ", PORT))

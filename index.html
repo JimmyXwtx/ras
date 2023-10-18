@@ -1,35 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>p5 Example</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js" integrity="sha512-bcfltY+lNLlNxz38yBBm/HLaUB1gTV6I0e+fahbF9pS6roIdzUytozWdnFV8ZnM6cSAG5EbmO0ag0a/fLZSG4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"
+        integrity="sha512-bcfltY+lNLlNxz38yBBm/HLaUB1gTV6I0e+fahbF9pS6roIdzUytozWdnFV8ZnM6cSAG5EbmO0ag0a/fLZSG4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+
 <body>
     <h1>P5 Example</h1>
     <script>
         let rectWidth;
+        let x = 100;
+        let y = 100;
+
+        let ledOn = false;
 
         function setup() {
-          createCanvas(720, 400);
-          noStroke();
-          background(230);
-          rectWidth = width / 4;
+            createCanvas(720, 400);
+            // noStroke();
+            background(230);
+            rectWidth = width / 4;
         }
-        
+
         function draw() {
-          // keep draw() here to continue looping while waiting for keys
+            // keep draw() here to continue looping while waiting for keys
+            if(x === width/2){
+                getLed()
+            }
+
+            if(ledOn){
+                stroke("red")
+                fill("red")
+            } else {
+                stroke("black")
+                fill("none")
+            }
+
+            if (keyIsDown(LEFT_ARROW)) {
+                x -= 5;
+            }
+
+            if (keyIsDown(RIGHT_ARROW)) {
+                x += 5;
+            }
+
+            if (keyIsDown(UP_ARROW)) {
+                y -= 5;
+            }
+
+            if (keyIsDown(DOWN_ARROW)) {
+                y += 5;
+            }
+
+            clear();
+
+            strokeWeight(2)
+            line(width/2, 50, width/2, height)
+       
+            
+            ellipse(x, y, 50, 50);
+            describe(`50-by-50 red ellipse moves left, right, up, and
+    down with arrow presses.`);
         }
-        
+
         function keyPressed() {
-          let keyIndex = -1;
-          if(key === " ") {
-            httpGet("/led", (response)=>console.log("Server responded with: ", response)) // httpGet() documentation: https://p5js.org/reference/#/p5/httpGet
-            console.log("Space is pressed")            
-          }
- 
+            let keyIndex = -1;
+            if (key === " ") {
+                getLed()
+            }
+        }
+
+        const getLed = ()=>{
+            httpGet("/led", (response) => {
+                ledOn = JSON.parse(response).state
+                console.log("Server responded with: ",  response)
+            }) // httpGet() documentation: https://p5js.org/reference/#/p5/httpGet
         }
     </script>
 </body>
+
 </html>
