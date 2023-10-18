@@ -1,6 +1,6 @@
 # Raspberry Pi Workshop
 
-This repository is for a Raspberry Pi workshop to control an LED via GPIO pins as well as through HTTP, TCP, and UDP.
+This repository is for a Raspberry Pi workshop to control an LED via GPIO pins as well as through HTTP, TCP, and UDP. The GPIO programming is done with node.js using the [`rpi-gpio` library](https://github.com/JamesBarwell/rpi-gpio.js).
 
 ## Setup
 * Please setup your Raspberry Pi via the [Raspberry Pi Imager](https://www.raspberrypi.com/software/). 
