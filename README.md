@@ -22,3 +22,6 @@ Connect an LED and switch to the Raspberry Pi with the following circuit:
   * [http://raspberrypihost/on](http://raspberrypi/on) will turn on LED
   * [http://raspberrypihost/off](http://raspberrypi/off) will turn off LED
   * [http://raspberrypihost/](http://raspberrypi/) will toggle LED
+
+### Arduino Client
+A simple Arduino client is found [here](client/). 

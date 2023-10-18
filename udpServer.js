@@ -27,6 +27,7 @@ gpio.on("change", (channel, value) => {
 
 const datagram = require("dgram");
 const socket = datagram.createSocket("udp4");
+const PORT = 8000;
 
 socket.on("message", (msg, recvInfo) => {
   console.log(`${msg} from ${recvInfo.address}:${recvInfo.port}`);
@@ -37,4 +38,4 @@ socket.on("message", (msg, recvInfo) => {
 
 socket.on("close", () => console.log("Server closed"));
 
-socket.bind(8080, () => console.log("Server running on port 8080"));
+socket.bind(PORT, () => console.log("Server running on port", PORT));
