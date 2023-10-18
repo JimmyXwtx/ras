@@ -18,10 +18,11 @@ Connect an LED and switch to the Raspberry Pi with the following circuit:
 * Run `node button` to control LED via switch
 * Run `node tcpServer` to start TCP server and control LED by connecting via TCP
 * Run `node udpServer` to start UDP server and control LED by sending UDP packet
-* run `node webApp` to start express server and control LED witha web browser:
-  * [http://raspberrypihost/on](http://raspberrypi/on) will turn on LED
-  * [http://raspberrypihost/off](http://raspberrypi/off) will turn off LED
-  * [http://raspberrypihost/](http://raspberrypi/) will toggle LED
+* Run `node webApp` to start express server and control LED with a web browser:
+  * [http://raspberrypihost:8000/on](http://raspberrypi:8000/on) will turn on LED
+  * [http://raspberrypihost:8000/off](http://raspberrypi:8000/off) will turn off LED
+  * [http://raspberrypihost:8000/](http://raspberrypi:8000/) will toggle LED
+* Run `node p5Server` to start server and visit [http://rapsberrypihost:8000](http://raspberrypi:8000) to control LED via a p5 server
 
 ### Arduino Client
 A simple Arduino client is found [here](client/). 
