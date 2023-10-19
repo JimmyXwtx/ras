@@ -24,6 +24,7 @@ gpio.on("change", (channel, value) => {
   writeLed(isOn)
 })
 // CONTENTS FROM button.js END //
+
 const path = require('path');
 const express = require("express");
 const app = express();
@@ -31,10 +32,10 @@ const app = express();
 const PORT = 8000;
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, '/index.html'));
+  res.sendFile(path.join(__dirname, '/index.html')); // Sends index.html to client
 })
 
-
+// toggles isOn when /led is requested
 app.get("/led", (req, res) => {
   isOn = !isOn
   writeLed(isOn)
