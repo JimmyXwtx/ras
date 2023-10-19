@@ -4,8 +4,8 @@ This repository is for a Raspberry Pi workshop to control an LED via GPIO pins a
 
 ## Setup
 * Please setup your Raspberry Pi via the [Raspberry Pi Imager](https://www.raspberrypi.com/software/). 
-* Install node.js using [nvm](https://github.com/nvm-sh/nvm)
-* Install `git`
+* Install node.js using [nvm](https://github.com/nvm-sh/nvm): `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash`
+* Install `git`: `sudo apt update && sudo apt upgrade -y && sudo apt install git`
 * Clone repository to Raspberry Pi
 * Install modules with `npm install`
 
@@ -16,7 +16,7 @@ Connect an LED and switch to the Raspberry Pi with the following circuit:
 
 ## Run
 * Run `node button` to control LED via switch
-* Run `node tcpServer` to start TCP server and control LED by connecting via TCP
+* Run `node tcpServer` to start TCP server and control LED by connecting via TCP  
 * Run `node udpServer` to start UDP server and control LED by sending UDP packet
 * Run `node webApp` to start express server and control LED with a web browser:
   * [http://raspberrypihost:8000/on](http://raspberrypi:8000/on) will turn on LED
