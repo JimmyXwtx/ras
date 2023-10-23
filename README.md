@@ -54,4 +54,5 @@ network={
 ```
 Note: If multiple wireless networks are found it will go down the priority list
 
-Follow [instructions](https://itp.nyu.edu/networks/setting-up-a-raspberry-pi) for instructions about setting up wpa-enterprise. 
+Follow [instructions](https://itp.nyu.edu/networks/setting-up-a-raspberry-pi) for instructions about setting up wpa-enterprise. # ras
+# ras
